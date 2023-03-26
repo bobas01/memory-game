@@ -1,0 +1,131 @@
+* {
+    padding: 0;
+    padding: 0;
+    font-family: 'Julee', cursive;
+
+}
+
+main {
+    max-width: 1500px;
+    width: 100%;
+    margin: 0 auto;
+}
+#presentation {
+    margin-top: 200px;
+}
+#presentation h1 {
+    text-align: center;
+    margin-bottom: 75px;
+    font-size: 2.5rem;
+}
+
+#presentation #btn {
+    margin: 0 auto;
+    display: block;
+    width: 10%;
+    height: 100px;
+    background-color: dodgerblue;
+    font-size: 2rem;
+    cursor: pointer;
+}
+#presentation.play{
+    display: none;
+}
+
+#jeu {
+    margin-top: 100px;
+    display: none;
+}
+#jeu h1 {
+    position: absolute;
+    top: 0%;
+    left: 45%;
+    font-size: 3rem;
+}
+#jeu.play {
+     display: flex;
+    flex-wrap: wrap;
+    margin-left: 100px;
+}
+
+
+.flip-box {
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+    position: relative;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.flip-box.active {
+    transform: rotateY(180deg);
+    display: block;
+}
+
+.flip-box-front,
+.flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+h2 {
+    text-align: center;
+    line-height: 100px;
+    font-family: 'Julee', cursive;
+    font-size: 2rem;
+
+
+}
+
+.flip-box-front {
+    background-color: rgba(40, 200, 45, 0.735);
+    border-radius: 25%;
+}
+
+.flip-box-back {
+    background-color: dodgerblue;
+    border-radius: 25%;
+    transform: rotateY(180deg);
+    font-size: 3rem;
+    line-height: 150px;
+}
+
+.emoji {
+    margin: auto;
+}
+
+ .found {
+    background-color: grey;
+    
+}
+
+.wrong {
+    animation: shake 1s;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-20px);
+    }
+
+    50% {
+        transform: translateX(20px);
+    }
+
+    75% {
+        transform: translateX(-20px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
